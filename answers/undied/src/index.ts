@@ -8,7 +8,6 @@ class LectureManager {
 		start: [] as number[],
 		end: [] as number[]
 	};
-	public messages: string[] = [];
 
 	public check() {
 		// Step 1: Iterate through the timings and remove one of the conflicting timing.
@@ -27,8 +26,7 @@ class LectureManager {
 		this.left = {
 			start: [],
 			end: []
-		}
-		this.messages = [];
+		};
 		for (const [i, v] of this.start.entries()) {
 			if (this.end[i] > this.start[i + 1]) {
 				this.main = i;
